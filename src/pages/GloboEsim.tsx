@@ -200,11 +200,16 @@ const GloboEsim: React.FC = () => {
         </section>
 
         <footer className="mt-6 pt-3 border-t border-slate-900 text-[11px] text-slate-500 flex flex-wrap justify-between gap-2">
-          <span>
-            Globo eSIM · Proyecto en etapa de validación para Lemon Mini Apps.
-          </span>
-          <span>Contacto: pedrovega4680@gmail.com</span>
+            <span>
+                Globo eSIM · Proyecto en etapa de validación para Lemon Mini Apps.
+            </span>
+
+            <span>
+                Contacto: pedrovega4680@gmail.com · Lemon Tag:{" "}
+                <span className="text-slate-300 font-semibold">$pedrocjs1</span>
+            </span>
         </footer>
+
       </div>
     </div>
   );

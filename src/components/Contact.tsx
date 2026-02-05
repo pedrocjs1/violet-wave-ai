@@ -18,14 +18,14 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!formData.name || !formData.email) {
       toast.error("Por favor completá los campos obligatorios.");
       return;
     }
 
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     setTimeout(() => {
       console.log("Form data:", formData);
@@ -86,7 +86,7 @@ const Contact = () => {
                     className="bg-accent-navy/50 border-violet-purple/20 text-white placeholder:text-text-secondary focus:border-violet-purple"
                   />
                 </div>
-                
+
                 <div className="space-y-2">
                   <Label htmlFor="email" className="text-white">
                     Email *
@@ -119,7 +119,7 @@ const Contact = () => {
                     className="bg-accent-navy/50 border-violet-purple/20 text-white placeholder:text-text-secondary focus:border-violet-purple"
                   />
                 </div>
-                
+
                 <div className="space-y-2">
                   <Label htmlFor="company" className="text-white">
                     Empresa
@@ -225,7 +225,7 @@ const Contact = () => {
             className="bg-white text-violet-purple hover:bg-white/90 shadow-lg transition-all duration-300 hover:scale-105 text-lg px-8"
           >
             <a
-              href="https://calendly.com/violet-wave/asesoramiento?month=2025-11"
+              href="https://cal.com/violet-wave/llamada-1-1"
               target="_blank"
               rel="noopener noreferrer"
             >

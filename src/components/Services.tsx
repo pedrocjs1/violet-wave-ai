@@ -64,7 +64,7 @@ const Services = () => {
                 className="text-violet-purple hover:text-violet-purple/80 hover:bg-violet-purple/10 p-0 h-auto font-semibold"
               >
                 <a
-                  href="https://calendly.com/violet-wave/asesoramiento?month=2025-11"
+                  href="https://cal.com/violet-wave/llamada-1-1"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -82,7 +82,7 @@ const Services = () => {
             className="bg-violet-purple hover:bg-violet-purple/90 text-white shadow-lg shadow-violet-purple/30 transition-all duration-300 hover:shadow-xl hover:shadow-violet-purple/40 hover:scale-105"
           >
             <a
-              href="https://calendly.com/violet-wave/asesoramiento?month=2025-11"
+              href="https://cal.com/violet-wave/llamada-1-1"
               target="_blank"
               rel="noopener noreferrer"
             >

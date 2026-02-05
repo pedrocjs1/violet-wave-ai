@@ -22,11 +22,10 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
           ? "bg-dark-navy/95 backdrop-blur-md border-b border-accent-navy/50 shadow-lg"
           : "bg-transparent"
-      }`}
+        }`}
     >
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-20">
@@ -87,7 +86,7 @@ const Header = () => {
             className="hidden md:inline-flex bg-violet-purple hover:bg-violet-purple/90 text-white shadow-lg shadow-violet-purple/20 transition-all duration-300 hover:shadow-xl hover:shadow-violet-purple/30 hover:scale-105"
           >
             <a
-              href="https://calendly.com/violet-wave/asesoramiento?month=2025-11"
+              href="https://cal.com/violet-wave/llamada-1-1"
               target="_blank"
               rel="noopener noreferrer"
             >

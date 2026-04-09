@@ -1,88 +1,161 @@
-import { Badge } from "@/components/ui/badge";
-import { TrendingUp, Shield, Users, Zap } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  Calendar,
+  FileText,
+  MessageCircle,
+  TrendingUp,
+  Megaphone,
+  Bell,
+  Users,
+  ExternalLink,
+  CheckCircle2,
+} from "lucide-react";
 
 const Portfolio = () => {
-  const cases = [
+  const features = [
     {
-      icon: Users,
-      title: "Chatbot de Gestión de Turnos para Odontología",
-      highlight: "Ahorro de tiempo, menos ausencias, mejor experiencia del paciente.",
-      description:
-        "Automatizamos la reserva de turnos y recordatorios. La clínica redujo ausentismos y mejoró la comunicación con pacientes.",
-      badges: ["Implementación en semanas", "Medición de ROI"],
+      icon: Calendar,
+      title: "Agenda inteligente",
+      description: "Sincronización con Google Calendar y reservas automáticas",
     },
     {
-      icon: Shield,
-      title: "Gestor de Flota Uber",
-      highlight: "Prevención de fraudes, transparencia financiera, reportes automáticos.",
-      description:
-        "Chatbot que registra gastos e ingresos de conductores, genera reportes y alerta anomalías para decisiones rápidas.",
-      badges: ["Soporte continuo", "Medición de ROI"],
+      icon: FileText,
+      title: "Historial clínico digital",
+      description: "Odontograma, periodontograma y evoluciones",
+    },
+    {
+      icon: MessageCircle,
+      title: "WhatsApp con IA 24/7",
+      description: "Atiende pacientes y agenda turnos automáticamente",
     },
     {
       icon: TrendingUp,
-      title: "Gestor de Talento para RRHH",
-      highlight: "Menos tiempo de contratación, mejor encaje candidato-puesto.",
-      description:
-        "Sistema con IA para screening de CVs y matching, reduciendo tiempos y mejorando la calidad de las ternas.",
-      badges: ["Implementación en semanas", "Soporte continuo"],
+      title: "Pipeline CRM comercial",
+      description: "Automatizaciones para vender más y mejor",
     },
     {
-      icon: Zap,
-      title: "Generador Automático de Presupuestos",
-      highlight: "Velocidad, precisión, precios personalizados.",
-      description:
-        "Herramienta que calcula presupuestos según requerimientos del cliente, acelerando la venta y estandarizando propuestas.",
-      badges: ["Medición de ROI", "Implementación en semanas"],
+      icon: Megaphone,
+      title: "Marketing por WhatsApp",
+      description: "Campañas masivas con templates aprobados por Meta",
+    },
+    {
+      icon: Bell,
+      title: "Recordatorios automáticos",
+      description: "Pre-visita, post-visita y seguimiento personalizado",
     },
   ];
 
+  const replaces = ["Kommo CRM", "Dentalink", "Mailchimp", "Calendly"];
+
   return (
-    <section id="portfolio" className="py-24 bg-dark-navy">
-      <div className="container mx-auto px-4 lg:px-8">
+    <section id="portfolio" className="py-24 lg:py-32 bg-dark-navy relative overflow-hidden">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-violet-purple/10 rounded-full blur-[150px] pointer-events-none" />
+
+      <div className="container mx-auto px-4 lg:px-8 relative">
         <div className="max-w-3xl mx-auto text-center mb-16 animate-slide-up">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-            Implementaciones que generan resultados
+          <span className="inline-block px-3 py-1 rounded-full bg-violet-purple/10 border border-violet-purple/30 text-violet-purple text-sm font-medium mb-4">
+            Caso de éxito
+          </span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 tracking-tight">
+            Dentiqa — Nuestro producto estrella
           </h2>
           <p className="text-lg text-text-secondary">
-            Casos reales con impacto en tiempo, costos y experiencia.
+            Plataforma SaaS todo-en-uno para clínicas dentales. Demuestra de
+            qué somos capaces.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {cases.map((item, index) => (
-            <div
-              key={index}
-              className="group bg-accent-navy/50 backdrop-blur-sm rounded-2xl p-8 border border-violet-purple/10 hover:border-violet-purple/30 transition-all duration-300 hover:shadow-xl hover:shadow-violet-purple/20 animate-fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="w-14 h-14 rounded-xl bg-violet-purple/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <item.icon className="w-7 h-7 text-violet-purple" />
+        <div className="max-w-6xl mx-auto bg-gradient-to-br from-accent-navy/80 to-dark-navy/80 backdrop-blur-sm rounded-3xl border border-violet-purple/20 overflow-hidden shadow-2xl shadow-violet-purple/10 animate-fade-in">
+          {/* Header */}
+          <div className="p-8 lg:p-12 border-b border-violet-purple/10">
+            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+              <div>
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-violet-purple to-blue-500 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-violet-purple/40">
+                    D
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-white">Dentiqa</h3>
+                    <p className="text-violet-purple text-sm">dentiqa.app</p>
+                  </div>
+                </div>
+                <p className="text-text-secondary max-w-2xl">
+                  Reemplaza Kommo CRM + Dentalink + herramientas de marketing
+                  en <strong className="text-white">UNA sola plataforma</strong>.
+                </p>
               </div>
-              
-              <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
-              
-              <p className="text-violet-purple font-semibold mb-4 text-sm">
-                {item.highlight}
-              </p>
-              
-              <p className="text-text-secondary leading-relaxed mb-6">
-                {item.description}
-              </p>
-              
+              <Button
+                asChild
+                size="lg"
+                className="bg-violet-purple hover:bg-violet-purple/90 text-white shadow-lg shadow-violet-purple/30 hover:scale-105 transition-all"
+              >
+                <a
+                  href="https://dentiqa.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  Visitar dentiqa.app
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </Button>
+            </div>
+          </div>
+
+          {/* Replaces */}
+          <div className="px-8 lg:px-12 py-6 bg-violet-purple/5 border-b border-violet-purple/10">
+            <div className="flex flex-wrap items-center gap-3">
+              <span className="text-sm font-semibold text-white">Reemplaza:</span>
+              {replaces.map((tool) => (
+                <span
+                  key={tool}
+                  className="text-sm px-3 py-1 rounded-full bg-white/5 text-text-secondary border border-white/10 line-through"
+                >
+                  {tool}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Features grid */}
+          <div className="p-8 lg:p-12">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+              {features.map((feature, index) => (
+                <div
+                  key={index}
+                  className="group p-5 rounded-xl bg-dark-navy/60 border border-violet-purple/10 hover:border-violet-purple/30 transition-all duration-300 hover:-translate-y-0.5"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-violet-purple/20 flex items-center justify-center mb-4 group-hover:bg-violet-purple/30 transition-colors">
+                    <feature.icon className="w-5 h-5 text-violet-purple" />
+                  </div>
+                  <h4 className="text-white font-semibold mb-1.5">
+                    {feature.title}
+                  </h4>
+                  <p className="text-sm text-text-secondary leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-6 border-t border-violet-purple/10">
+              <div className="flex items-center gap-2 text-white">
+                <Users className="w-5 h-5 text-violet-purple" />
+                <span className="font-semibold">Multi-usuario con roles:</span>
+              </div>
               <div className="flex flex-wrap gap-2">
-                {item.badges.map((badge, badgeIndex) => (
-                  <Badge
-                    key={badgeIndex}
-                    variant="secondary"
-                    className="bg-violet-purple/10 text-violet-purple border-violet-purple/20 hover:bg-violet-purple/20"
+                {["Dueño", "Admin", "Dentista", "Recepcionista"].map((role) => (
+                  <span
+                    key={role}
+                    className="text-xs font-medium px-2.5 py-1 rounded-full bg-violet-purple/10 text-violet-purple border border-violet-purple/20"
                   >
-                    {badge}
-                  </Badge>
+                    <CheckCircle2 className="w-3 h-3 inline mr-1" />
+                    {role}
+                  </span>
                 ))}
               </div>
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>

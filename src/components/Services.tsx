@@ -1,94 +1,84 @@
-import { Button } from "@/components/ui/button";
-import { MessageSquare, Settings, Cpu, Workflow } from "lucide-react";
+import { Code2, MessageSquare, Bot, Plug } from "lucide-react";
 
 const Services = () => {
   const services = [
     {
+      icon: Code2,
+      title: "SaaS personalizado con IA",
+      description:
+        "Desarrollamos plataformas a medida con inteligencia artificial integrada. Desde el MVP hasta el producto en producción.",
+      tags: ["Next.js", "PostgreSQL", "Anthropic Claude"],
+    },
+    {
       icon: MessageSquare,
-      title: "Chatbots de Atención al Cliente",
+      title: "Automatización WhatsApp",
       description:
-        "Agentes conversacionales que responden 24/7 y escalan sin costo fijo.",
+        "WhatsApp Business API oficial para automatizar atención, ventas, recordatorios y marketing. Somos proveedor verificado por Meta.",
+      tags: ["Cloud API", "Templates", "Webhooks"],
     },
     {
-      icon: Settings,
-      title: "Automatización de Procesos",
+      icon: Bot,
+      title: "Chatbots inteligentes",
       description:
-        "Flujos que eliminan tareas repetitivas y conectan tus herramientas.",
+        "Agentes conversacionales con Claude AI que entienden contexto, ejecutan acciones y atienden 24/7 sin intervención humana.",
+      tags: ["Claude Sonnet", "RAG", "Function calling"],
     },
     {
-      icon: Cpu,
-      title: "Integraciones de IA a Medida",
+      icon: Plug,
+      title: "Integraciones",
       description:
-        "Modelos y APIs que se ajustan a tus sistemas y objetivos.",
-    },
-    {
-      icon: Workflow,
-      title: "Optimización de Workflows",
-      description:
-        "Mapeo, métricas y mejoras continuas para ganar eficiencia.",
+        "Conectamos tus sistemas con Google Calendar, Mercado Pago, Resend, CRMs y cualquier API que necesites.",
+      tags: ["REST APIs", "Webhooks", "OAuth"],
     },
   ];
 
   return (
-    <section id="servicios" className="py-24 bg-accent-navy/30">
-      <div className="container mx-auto px-4 lg:px-8">
+    <section id="servicios" className="py-24 lg:py-32 bg-accent-navy/30 relative">
+      <div className="absolute inset-0 bg-gradient-to-b from-dark-navy via-transparent to-dark-navy pointer-events-none" />
+      <div className="container mx-auto px-4 lg:px-8 relative">
         <div className="max-w-3xl mx-auto text-center mb-16 animate-slide-up">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-            Soluciones de automatización con IA
+          <span className="inline-block px-3 py-1 rounded-full bg-violet-purple/10 border border-violet-purple/30 text-violet-purple text-sm font-medium mb-4">
+            Qué hacemos
+          </span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 tracking-tight">
+            Software que entiende tu negocio
           </h2>
           <p className="text-lg text-text-secondary">
-            Implementaciones a medida para escalar sin fricción.
+            Construimos soluciones a medida con las mejores tecnologías del mercado.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
           {services.map((service, index) => (
             <div
               key={index}
-              className="group bg-dark-navy/50 backdrop-blur-sm rounded-2xl p-6 border border-violet-purple/10 hover:border-violet-purple/30 transition-all duration-300 hover:shadow-lg hover:shadow-violet-purple/20 hover:-translate-y-1 animate-fade-in"
+              className="group relative bg-gradient-to-br from-dark-navy/80 to-accent-navy/40 backdrop-blur-sm rounded-2xl p-8 border border-violet-purple/10 hover:border-violet-purple/40 transition-all duration-500 hover:shadow-2xl hover:shadow-violet-purple/20 hover:-translate-y-1 animate-fade-in overflow-hidden"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-12 h-12 rounded-lg bg-violet-purple/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                <service.icon className="w-6 h-6 text-violet-purple" />
+              <div className="absolute top-0 right-0 w-32 h-32 bg-violet-purple/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative">
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-violet-purple to-violet-purple/60 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-violet-purple/30">
+                  <service.icon className="w-7 h-7 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-3">
+                  {service.title}
+                </h3>
+                <p className="text-text-secondary leading-relaxed mb-6">
+                  {service.description}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {service.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="text-xs font-medium px-3 py-1 rounded-full bg-violet-purple/10 text-violet-purple border border-violet-purple/20"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <h3 className="text-lg font-bold text-white mb-3">
-                {service.title}
-              </h3>
-              <p className="text-text-secondary text-sm leading-relaxed mb-4">
-                {service.description}
-              </p>
-              <Button
-                asChild
-                variant="ghost"
-                size="sm"
-                className="text-violet-purple hover:text-violet-purple/80 hover:bg-violet-purple/10 p-0 h-auto font-semibold"
-              >
-                <a
-                  href="https://cal.com/violet-wave/llamada-1-1"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Consultar este servicio →
-                </a>
-              </Button>
             </div>
           ))}
-        </div>
-
-        <div className="text-center">
-          <Button
-            asChild
-            size="lg"
-            className="bg-violet-purple hover:bg-violet-purple/90 text-white shadow-lg shadow-violet-purple/30 transition-all duration-300 hover:shadow-xl hover:shadow-violet-purple/40 hover:scale-105"
-          >
-            <a
-              href="https://cal.com/violet-wave/llamada-1-1"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Automatizá tu Negocio Ahora
-            </a>
-          </Button>
         </div>
       </div>
     </section>

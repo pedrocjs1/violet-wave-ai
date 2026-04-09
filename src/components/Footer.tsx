@@ -65,11 +65,11 @@ const Footer = () => {
                 +54 9 266 400 0051
               </a>
               <a
-                href="mailto:hola@violetwaveai.com"
+                href="mailto:violetwave2026@gmail.com"
                 className="flex items-center gap-2 text-text-secondary hover:text-violet-purple transition-colors"
               >
                 <Mail className="w-4 h-4" />
-                hola@violetwaveai.com
+                violetwave2026@gmail.com
               </a>
               <p className="flex items-center gap-2 text-text-secondary">
                 <MapPin className="w-4 h-4" />
@@ -96,6 +96,35 @@ const Footer = () => {
               >
                 Política de Privacidad
               </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Founders */}
+        <div className="pt-8 mb-8 border-t border-violet-purple/10">
+          <h4 className="text-white font-semibold mb-5 text-center">Fundadores</h4>
+          <div className="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
+            <div className="p-5 rounded-xl bg-accent-navy/40 border border-violet-purple/10">
+              <p className="text-white font-semibold">Pedro Vega</p>
+              <p className="text-xs text-violet-purple mb-2">CTO & Co-founder</p>
+              <a
+                href="mailto:pedrovega4680@gmail.com"
+                className="flex items-center gap-2 text-text-secondary hover:text-violet-purple transition-colors text-sm"
+              >
+                <Mail className="w-3.5 h-3.5" />
+                pedrovega4680@gmail.com
+              </a>
+            </div>
+            <div className="p-5 rounded-xl bg-accent-navy/40 border border-violet-purple/10">
+              <p className="text-white font-semibold">Ramiro Baudo</p>
+              <p className="text-xs text-violet-purple mb-2">Co-founder</p>
+              <a
+                href="mailto:rbaudo.violetwave@gmail.com"
+                className="flex items-center gap-2 text-text-secondary hover:text-violet-purple transition-colors text-sm"
+              >
+                <Mail className="w-3.5 h-3.5" />
+                rbaudo.violetwave@gmail.com
+              </a>
             </div>
           </div>
         </div>

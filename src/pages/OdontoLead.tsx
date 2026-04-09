@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Cal, { getCalApi } from "@calcom/embed-react";
 import { Button } from "@/components/ui/button";
-import logoCompleto from "@/assets/logo-completo.png";
+import logoCompleto from "@/assets/logo-completo.webp";
 import casoDeExitoImg from "@/assets/casodeexito.png"; //
 
 // --- ICONOS (SVG Optimizados) ---

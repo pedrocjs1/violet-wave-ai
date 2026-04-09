@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
-import logoCompleto from "@/assets/logo-completo.png";
+import logoCompleto from "@/assets/logo-completo.webp";
 import { Button } from "@/components/ui/button";
 
 const DentalFlowPrivacyPolicy = () => {

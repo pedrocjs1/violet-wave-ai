@@ -7,7 +7,7 @@ import { toast } from "sonner";
 import { MapPin, Mail, MessageCircle, Phone } from "lucide-react";
 
 const WHATSAPP_NUMBER = "5492664000051";
-const EMAIL = "hola@violetwaveai.com";
+const EMAIL = "violetwave2026@gmail.com";
 
 const Contact = () => {
   const [formData, setFormData] = useState({

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
-import logoCompleto from "@/assets/logo-completo.png";
+import logoCompleto from "@/assets/logo-completo.webp";
 import { Button } from "@/components/ui/button";
 
 const PrivacyPolicy = () => {
@@ -156,10 +156,10 @@ const PrivacyPolicy = () => {
               <p className="mt-4">
                 Podés ejercer estos derechos escribiendo a{" "}
                 <a
-                  href="mailto:ramiro.baudo@violetwaveai.com"
+                  href="mailto:violetwave2026@gmail.com"
                   className="text-violet-purple hover:text-violet-purple/80 font-semibold"
                 >
-                  ramiro.baudo@violetwaveai.com
+                  violetwave2026@gmail.com
                 </a>
               </p>
             </section>
@@ -185,10 +185,10 @@ const PrivacyPolicy = () => {
                 <p>
                   📧{" "}
                   <a
-                    href="mailto:ramiro.baudo@violetwaveai.com"
+                    href="mailto:violetwave2026@gmail.com"
                     className="text-violet-purple hover:text-violet-purple/80 font-semibold"
                   >
-                    ramiro.baudo@violetwaveai.com
+                    violetwave2026@gmail.com
                   </a>
                 </p>
                 <p>

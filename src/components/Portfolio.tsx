@@ -71,9 +71,12 @@ const Portfolio = () => {
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
               <div>
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-violet-purple to-blue-500 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-violet-purple/40">
-                    D
-                  </div>
+                  <img
+                    src="/logo-dentiqa-120.png"
+                    alt="Dentiqa logo"
+                    className="w-12 h-12 rounded-xl object-contain bg-white/5 p-1 shadow-lg shadow-violet-purple/30"
+                    loading="lazy"
+                  />
                   <div>
                     <h3 className="text-2xl font-bold text-white">Dentiqa</h3>
                     <p className="text-violet-purple text-sm">dentiqa.app</p>

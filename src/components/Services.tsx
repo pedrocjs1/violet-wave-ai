@@ -4,10 +4,17 @@ const Services = () => {
   const services = [
     {
       icon: Code2,
-      title: "Desarrollo web a medida",
+      title: "Desarrollo web",
       description:
         "Creamos páginas web responsivas, modernas y orientadas a la conversión, con diseño adaptado a tu marca y rendimiento óptimo.",
       tags: ["Next.js", "React", "Tailwind CSS"],
+    },
+    {
+      icon: Bot,
+      title: "Software a medida",
+      description:
+        "Desarrollamos sistemas personalizados y soluciones empresariales que automatizan procesos, integran datos y escalan con tu negocio.",
+      tags: ["Custom software", "API", "Automatización"],
     },
     {
       icon: MessageSquare,

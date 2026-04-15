@@ -4,10 +4,10 @@ const Services = () => {
   const services = [
     {
       icon: Code2,
-      title: "SaaS personalizado con IA",
+      title: "Desarrollo web a medida",
       description:
-        "Desarrollamos plataformas a medida con inteligencia artificial integrada. Desde el MVP hasta el producto en producción.",
-      tags: ["Next.js", "PostgreSQL", "Anthropic Claude"],
+        "Creamos páginas web responsivas, modernas y orientadas a la conversión, con diseño adaptado a tu marca y rendimiento óptimo.",
+      tags: ["Next.js", "React", "Tailwind CSS"],
     },
     {
       icon: MessageSquare,
@@ -18,10 +18,10 @@ const Services = () => {
     },
     {
       icon: Bot,
-      title: "Chatbots inteligentes",
+      title: "SEO local y GEO",
       description:
-        "Agentes conversacionales con Claude AI que entienden contexto, ejecutan acciones y atienden 24/7 sin intervención humana.",
-      tags: ["Claude Sonnet", "RAG", "Function calling"],
+        "Especialistas en posicionamiento local y geolocalizado para atraer clientes cercanos y mejorar tu visibilidad en búsquedas relevantes.",
+      tags: ["SEO técnico", "GEO targeting", "Google Business"],
     },
     {
       icon: Plug,

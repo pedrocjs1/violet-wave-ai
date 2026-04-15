@@ -3,18 +3,19 @@ import { Code2, MessageSquare, Bot, Plug } from "lucide-react";
 const Services = () => {
   const services = [
     {
+      icon: Bot,
+      title: "Software Personalizado",
+      description:
+        "Desarrollamos sistemas a la medida y soluciones empresariales que automatizan procesos, integran datos e inteligencia artificial aplicada y escalan con tu negocio.",
+      tags: ["Custom software", "API", "Automatización"],
+      className: "md:col-span-2",
+    },
+    {
       icon: Code2,
       title: "Desarrollo web",
       description:
         "Creamos páginas web responsivas, modernas y orientadas a la conversión, con diseño adaptado a tu marca y rendimiento óptimo.",
       tags: ["Next.js", "React", "Tailwind CSS"],
-    },
-    {
-      icon: Bot,
-      title: "Software a medida",
-      description:
-        "Desarrollamos sistemas personalizados y soluciones empresariales que automatizan procesos, integran datos y escalan con tu negocio.",
-      tags: ["Custom software", "API", "Automatización"],
     },
     {
       icon: MessageSquare,

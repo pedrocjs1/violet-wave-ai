@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import logoCompleto from "@/assets/logo-completo.webp";
 import ProductPreview from "@/components/ProductPreview";
 
 const COLORS = {
@@ -214,23 +213,13 @@ const PropuestaHelfen: React.FC = () => {
       <div className="mx-auto w-full max-w-6xl px-5 sm:px-8 lg:px-10">
         {/* HERO */}
         <header className="pt-10 sm:pt-14 lg:pt-20 pb-12 sm:pb-16 lg:pb-20">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center">
             <img
-              src={logoCompleto}
+              src="/logo-violetwave-blanco.jpeg"
               alt="Violet Wave"
-              className="h-9 sm:h-11 w-auto"
+              className="h-24 sm:h-28 lg:h-32 w-auto"
               loading="eager"
             />
-            <span
-              className="hidden sm:inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-[11px] font-medium tracking-wide"
-              style={{
-                background: "rgba(237,237,240,0.04)",
-                border: "1px solid rgba(237,237,240,0.08)",
-                color: COLORS.mute,
-              }}
-            >
-              <Dot /> Propuesta confidencial
-            </span>
           </div>
 
           <div className="mt-12 sm:mt-16 lg:mt-20">
@@ -260,10 +249,8 @@ const PropuestaHelfen: React.FC = () => {
               y paneles diferenciados para Helfen y sus clínicas cliente.
             </p>
 
-            <div className="mt-10 sm:mt-12 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+            <div className="mt-10 sm:mt-12 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 max-w-md">
               {[
-                { k: "Cliente", v: "Helfen" },
-                { k: "Agencia", v: "Violet Wave" },
                 { k: "Emisión", v: "20 de abril de 2026" },
                 { k: "Validez", v: "30 días" },
               ].map((s) => (
@@ -307,24 +294,34 @@ const PropuestaHelfen: React.FC = () => {
               className="mt-5 text-lg sm:text-xl lg:text-2xl leading-relaxed font-light"
               style={{ color: COLORS.paper }}
             >
-              No es un chatbot más. Es un{" "}
-              <span style={{ color: COLORS.brandSoft, fontWeight: 500 }}>
-                activo de propiedad intelectual
-              </span>{" "}
-              propio de Helfen: una plataforma que permite escalar la operación
-              y la retención de clínicas cliente sin sumar costos operativos
-              proporcionales, y convierte a Helfen de agencia de leads en{" "}
+              El método de Helfen ya demostró que funciona: más pacientes de
+              ortodoncia para clínicas, sin que el dueño tenga que grabar
+              videos ni contestar mensajes. El cuello de botella hoy es
+              operativo —{" "}
               <span style={{ color: COLORS.paper, fontWeight: 500 }}>
-                plataforma de servicios
+                cada clínica nueva suma setup, bots y seguimiento humano.
               </span>
-              .
+            </p>
+            <p
+              className="mt-5 text-lg sm:text-xl lg:text-2xl leading-relaxed font-light"
+              style={{ color: COLORS.paper }}
+            >
+              Esta plataforma convierte ese método en{" "}
+              <span style={{ color: COLORS.brandSoft, fontWeight: 500 }}>
+                producto propio de Helfen
+              </span>
+              : cada clínica cliente se da de alta en minutos, opera sobre su
+              propio panel y su propio bot, y pasa a ser una línea más en la
+              tabla — no una carga operativa nueva. Helfen deja de vender
+              resultado con atención humana y empieza a vender acceso a un
+              sistema que entrega el resultado.
             </p>
 
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
               {[
                 {
-                  t: "Arquitectura multitenant probada",
-                  d: "La misma base técnica construida para Dentiqa, integrada de forma oficial con WhatsApp Cloud API de Meta.",
+                  t: "Arquitectura multitenant estricta",
+                  d: "Cada clínica cliente opera en un espacio aislado. Sus datos, configuraciones y conversaciones nunca se cruzan con los de otra.",
                 },
                 {
                   t: "Encriptación AES-256-GCM",
@@ -465,16 +462,16 @@ const PropuestaHelfen: React.FC = () => {
               />
 
               <div className="relative flex flex-col sm:flex-row items-start sm:items-center gap-5 sm:gap-6">
-                <div
-                  className="h-16 w-16 sm:h-20 sm:w-20 rounded-2xl flex items-center justify-center text-xl sm:text-2xl font-bold shrink-0"
+                <img
+                  src="/foto-pedro.jpeg"
+                  alt="Pedro Vega"
+                  loading="lazy"
+                  className="h-16 w-16 sm:h-20 sm:w-20 rounded-2xl object-cover shrink-0"
                   style={{
-                    background: `linear-gradient(135deg, ${COLORS.brand} 0%, ${COLORS.brandSoft} 100%)`,
-                    color: COLORS.paper,
+                    border: "1px solid rgba(117,59,189,0.40)",
                     boxShadow: "0 10px 30px -10px rgba(117,59,189,0.55)",
                   }}
-                >
-                  PV
-                </div>
+                />
                 <div className="min-w-0">
                   <div
                     className="text-[11px] uppercase tracking-[0.18em] font-medium"
@@ -838,7 +835,7 @@ const PropuestaHelfen: React.FC = () => {
             <span style={{ color: COLORS.paper, fontWeight: 600 }}>
               USD 8.000
             </span>{" "}
-            · 2.400 + 3.200 + 2.400 — sin costos ocultos.
+            = 2.400 + 3.200 + 2.400 — sin costos ocultos.
           </div>
         </section>
 
@@ -940,7 +937,11 @@ const PropuestaHelfen: React.FC = () => {
                 </span>
               </div>
               <p className="mt-3 text-sm leading-relaxed" style={{ color: COLORS.mute }}>
-                Abono fijo mensual.{" "}
+                Abono fijo mensual{" "}
+                <span style={{ color: COLORS.paper, fontWeight: 500 }}>
+                  a partir del 4to mes
+                </span>
+                , una vez terminados los 90 días de garantía.{" "}
                 <span style={{ color: COLORS.paper, fontWeight: 500 }}>
                   Sin incrementos por contrato de 1 año.
                 </span>
@@ -1149,8 +1150,8 @@ const PropuestaHelfen: React.FC = () => {
                   className="mt-5 text-base sm:text-lg leading-relaxed"
                   style={{ color: COLORS.mute }}
                 >
-                  Coordinamos una reunión de cierre con Pedro para revisar
-                  puntos finos, firmar el acuerdo y lanzar el kickoff técnico.
+                  Coordinamos una reunión de cierre para revisar puntos finos,
+                  firmar el acuerdo y lanzar el kickoff técnico.
                 </p>
 
                 <div
@@ -1170,7 +1171,7 @@ const PropuestaHelfen: React.FC = () => {
                     className="mt-2 text-lg sm:text-xl font-semibold"
                     style={{ color: COLORS.paper }}
                   >
-                    Pedro Vega — Violet Wave
+                    Violet Wave
                   </div>
                   <a
                     href="https://violetwaveai.com/"
@@ -1256,7 +1257,7 @@ const PropuestaHelfen: React.FC = () => {
           >
             violetwaveai.com
           </a>
-          {" "}· Propuesta confidencial para Helfen.
+          {" "}· Propuesta para Helfen.
         </footer>
       </div>
     </div>

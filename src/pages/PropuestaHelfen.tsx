@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import logoCompleto from "@/assets/logo-completo.webp";
+import ProductPreview from "@/components/ProductPreview";
 
 const COLORS = {
   bgDeep: "#0A0A0F",
@@ -429,6 +430,173 @@ const PropuestaHelfen: React.FC = () => {
           </div>
         </section>
 
+        {/* QUIÉN CONSTRUYE ESTO */}
+        <section className="py-12 sm:py-16">
+          <div className="flex flex-col items-start sm:items-center sm:text-center">
+            <SectionLabel>Quién construye esto</SectionLabel>
+            <h2
+              className="mt-4 text-3xl sm:text-4xl lg:text-[42px] font-semibold tracking-tight"
+              style={{ color: COLORS.paper }}
+            >
+              La seguridad no se improvisa.
+            </h2>
+            <p
+              className="mt-4 max-w-2xl text-base sm:text-lg"
+              style={{ color: COLORS.mute }}
+            >
+              Toda la rigurosidad técnica que prometemos en esta propuesta
+              viene respaldada por años de experiencia real en sistemas donde
+              un error cuesta dinero de verdad.
+            </p>
+          </div>
+
+          <div className="mt-10">
+            <div
+              className="relative overflow-hidden rounded-3xl p-7 sm:p-10"
+              style={{
+                background: `linear-gradient(180deg, rgba(117,59,189,0.12) 0%, rgba(117,59,189,0.02) 100%)`,
+                border: "1px solid rgba(117,59,189,0.30)",
+              }}
+            >
+              <div
+                className="pointer-events-none absolute -top-24 -right-24 h-64 w-64 rounded-full opacity-30 blur-3xl"
+                style={{ background: COLORS.brand }}
+                aria-hidden
+              />
+
+              <div className="relative flex flex-col sm:flex-row items-start sm:items-center gap-5 sm:gap-6">
+                <div
+                  className="h-16 w-16 sm:h-20 sm:w-20 rounded-2xl flex items-center justify-center text-xl sm:text-2xl font-bold shrink-0"
+                  style={{
+                    background: `linear-gradient(135deg, ${COLORS.brand} 0%, ${COLORS.brandSoft} 100%)`,
+                    color: COLORS.paper,
+                    boxShadow: "0 10px 30px -10px rgba(117,59,189,0.55)",
+                  }}
+                >
+                  PV
+                </div>
+                <div className="min-w-0">
+                  <div
+                    className="text-[11px] uppercase tracking-[0.18em] font-medium"
+                    style={{ color: "#c9aff2" }}
+                  >
+                    Co-Founder · Violet Wave
+                  </div>
+                  <div
+                    className="mt-1 text-2xl sm:text-3xl font-semibold tracking-tight"
+                    style={{ color: COLORS.paper }}
+                  >
+                    Pedro Vega
+                  </div>
+                  <div className="mt-3">
+                    <a
+                      href="https://linkedin.com/in/pedro-vega-violet-wave/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-[12px] font-medium transition-colors"
+                      style={{
+                        background: "rgba(237,237,240,0.06)",
+                        border: "1px solid rgba(237,237,240,0.14)",
+                        color: COLORS.paper,
+                      }}
+                    >
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        className="h-3.5 w-3.5"
+                        aria-hidden
+                      >
+                        <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8h4.56v14H.22V8zm7.5 0h4.37v1.92h.06c.61-1.15 2.1-2.37 4.33-2.37 4.63 0 5.49 3.05 5.49 7.02V22h-4.56v-6.2c0-1.48-.03-3.38-2.06-3.38-2.06 0-2.38 1.61-2.38 3.27V22H7.72V8z" />
+                      </svg>
+                      Ver perfil en LinkedIn
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative mt-8 grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
+                {[
+                  {
+                    t: "4 años en backend fintech",
+                    d: "Procesamiento de pagos en Panamá — PagueloFácil, 2023–2025.",
+                  },
+                  {
+                    t: "Microservicio Request_Funds",
+                    d: "Liderazgo del sistema de fondeo central de la plataforma.",
+                  },
+                  {
+                    t: "PostgreSQL y Stored Procedures",
+                    d: "Diseño y programación de SP para operaciones críticas de dinero.",
+                  },
+                  {
+                    t: "Refinamiento del checkout",
+                    d: "Rediseño del proceso implementando patrones Factory y Builder.",
+                  },
+                  {
+                    t: "Performance y bugs críticos",
+                    d: "Resolución de errores productivos y optimización de rendimiento.",
+                  },
+                  {
+                    t: "Fullstack +700 hs",
+                    d: "Bootcamp intensivo MindHub LA, 2022–2023.",
+                  },
+                ].map((b) => (
+                  <div
+                    key={b.t}
+                    className="flex items-start gap-3 rounded-xl p-4"
+                    style={{
+                      background: "rgba(237,237,240,0.03)",
+                      border: "1px solid rgba(237,237,240,0.08)",
+                    }}
+                  >
+                    <span
+                      className="mt-2 shrink-0"
+                      style={{ color: COLORS.brandSoft }}
+                    >
+                      <Dot />
+                    </span>
+                    <div>
+                      <div
+                        className="text-[14px] font-semibold"
+                        style={{ color: COLORS.paper }}
+                      >
+                        {b.t}
+                      </div>
+                      <div
+                        className="mt-1 text-[13px] leading-relaxed"
+                        style={{ color: COLORS.mute }}
+                      >
+                        {b.d}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <blockquote
+                className="relative mt-8 rounded-2xl p-5 sm:p-6 text-base sm:text-lg leading-relaxed italic"
+                style={{
+                  background: "rgba(237,237,240,0.04)",
+                  border: "1px solid rgba(237,237,240,0.10)",
+                  color: "rgba(237,237,240,0.92)",
+                }}
+              >
+                <span
+                  className="absolute -top-3 left-5 px-2 text-3xl leading-none font-serif"
+                  style={{ background: COLORS.bgDeep, color: COLORS.brandSoft }}
+                  aria-hidden
+                >
+                  &ldquo;
+                </span>
+                La misma rigurosidad que exige un sistema de pagos es la que
+                aplicamos a la plataforma de Helfen: multitenancy estricto,
+                encriptación de credenciales, audit logs completos y cero zonas
+                grises en la arquitectura.
+              </blockquote>
+            </div>
+          </div>
+        </section>
+
         {/* CRONOGRAMA */}
         <section className="py-12 sm:py-16">
           <div className="grid lg:grid-cols-12 gap-8 lg:gap-12">
@@ -506,6 +674,30 @@ const PropuestaHelfen: React.FC = () => {
                 ))}
               </ol>
             </div>
+          </div>
+        </section>
+
+        {/* PREVIEW INTERACTIVO */}
+        <section className="py-12 sm:py-16">
+          <div className="flex flex-col items-start sm:items-center sm:text-center">
+            <SectionLabel>Preview</SectionLabel>
+            <h2
+              className="mt-4 text-3xl sm:text-4xl lg:text-[44px] font-semibold tracking-tight"
+              style={{ color: COLORS.paper }}
+            >
+              Así se va a ver tu plataforma.
+            </h2>
+            <p
+              className="mt-4 max-w-2xl text-base sm:text-lg"
+              style={{ color: COLORS.mute }}
+            >
+              Navegá entre las vistas para imaginarte el producto final.
+              Datos de muestra — la interfaz real es idéntica.
+            </p>
+          </div>
+
+          <div className="mt-10">
+            <ProductPreview />
           </div>
         </section>
 

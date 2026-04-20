@@ -323,8 +323,8 @@ const PropuestaHelfen: React.FC = () => {
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
               {[
                 {
-                  t: "Arquitectura multitenant en producción",
-                  d: "La misma base técnica que opera hoy en Dentiqa, validada con clínicas reales y WhatsApp oficial de Meta.",
+                  t: "Arquitectura multitenant probada",
+                  d: "La misma base técnica construida para Dentiqa, integrada de forma oficial con WhatsApp Cloud API de Meta.",
                 },
                 {
                   t: "Encriptación AES-256-GCM",
@@ -514,62 +514,35 @@ const PropuestaHelfen: React.FC = () => {
                 </div>
               </div>
 
-              <div className="relative mt-8 grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
+              <p
+                className="relative mt-7 max-w-3xl text-base sm:text-lg leading-relaxed"
+                style={{ color: "rgba(237,237,240,0.88)" }}
+              >
+                Antes de fundar Violet Wave, 4 años desarrollando backend para
+                fintech en Latinoamérica — sistemas de procesamiento de pagos
+                donde una falla de seguridad o un bug en producción cuesta
+                dinero real. Esa misma disciplina es la que aplico a cada
+                plataforma que construimos.
+              </p>
+
+              <div className="relative mt-6 flex flex-wrap gap-2">
                 {[
-                  {
-                    t: "4 años en backend fintech",
-                    d: "Procesamiento de pagos en Panamá — PagueloFácil, 2023–2025.",
-                  },
-                  {
-                    t: "Microservicio Request_Funds",
-                    d: "Liderazgo del sistema de fondeo central de la plataforma.",
-                  },
-                  {
-                    t: "PostgreSQL y Stored Procedures",
-                    d: "Diseño y programación de SP para operaciones críticas de dinero.",
-                  },
-                  {
-                    t: "Refinamiento del checkout",
-                    d: "Rediseño del proceso implementando patrones Factory y Builder.",
-                  },
-                  {
-                    t: "Performance y bugs críticos",
-                    d: "Resolución de errores productivos y optimización de rendimiento.",
-                  },
-                  {
-                    t: "Fullstack +700 hs",
-                    d: "Bootcamp intensivo MindHub LA, 2022–2023.",
-                  },
-                ].map((b) => (
-                  <div
-                    key={b.t}
-                    className="flex items-start gap-3 rounded-xl p-4"
+                  "Arquitectura backend",
+                  "Seguridad en sistemas críticos",
+                  "Bases de datos a escala",
+                ].map((tag) => (
+                  <span
+                    key={tag}
+                    className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[12px] font-medium"
                     style={{
-                      background: "rgba(237,237,240,0.03)",
-                      border: "1px solid rgba(237,237,240,0.08)",
+                      background: "rgba(117,59,189,0.10)",
+                      border: "1px solid rgba(117,59,189,0.28)",
+                      color: "#c9aff2",
                     }}
                   >
-                    <span
-                      className="mt-2 shrink-0"
-                      style={{ color: COLORS.brandSoft }}
-                    >
-                      <Dot />
-                    </span>
-                    <div>
-                      <div
-                        className="text-[14px] font-semibold"
-                        style={{ color: COLORS.paper }}
-                      >
-                        {b.t}
-                      </div>
-                      <div
-                        className="mt-1 text-[13px] leading-relaxed"
-                        style={{ color: COLORS.mute }}
-                      >
-                        {b.d}
-                      </div>
-                    </div>
-                  </div>
+                    <Dot />
+                    {tag}
+                  </span>
                 ))}
               </div>
 
@@ -691,8 +664,9 @@ const PropuestaHelfen: React.FC = () => {
               className="mt-4 max-w-2xl text-base sm:text-lg"
               style={{ color: COLORS.mute }}
             >
-              Navegá entre las vistas para imaginarte el producto final.
-              Datos de muestra — la interfaz real es idéntica.
+              Una pequeña demo del formato y estilo que va a tener la
+              plataforma. La app final suma más módulos, flujos y
+              configuraciones — pero lo visual y la navegación van por acá.
             </p>
           </div>
 
@@ -1061,17 +1035,21 @@ const PropuestaHelfen: React.FC = () => {
                 >
                   dentiqa.app
                 </a>{" "}
-                — es una plataforma SaaS dental todo-en-uno operando hoy en
-                producción con clínicas reales, multitenant, integrada con
-                WhatsApp Cloud API y con motor de IA propio. La arquitectura de
-                Helfen se monta sobre esa misma base probada.
+                — es nuestra plataforma SaaS dental todo-en-uno: multitenant,
+                integrada con WhatsApp Cloud API y con motor de IA propio. La
+                arquitectura de Helfen se monta sobre esa misma{" "}
+                <span style={{ color: COLORS.paper, fontWeight: 500 }}>
+                  base técnica probada
+                </span>
+                , reaprovechando meses de trabajo en infraestructura, seguridad
+                y flujos de IA conversacional.
               </p>
             </div>
 
             <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
               <Feature
                 title="Arquitectura probada en Dentiqa"
-                desc="Misma base multitenant, misma estrategia de aislamiento por tenant, misma encriptación AES-256 que ya opera en producción."
+                desc="Misma base multitenant, misma estrategia de aislamiento por tenant y misma encriptación AES-256 sobre credenciales y datos sensibles."
                 icon={
                   <svg
                     viewBox="0 0 24 24"

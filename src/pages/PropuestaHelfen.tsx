@@ -215,7 +215,7 @@ const PropuestaHelfen: React.FC = () => {
         <header className="pt-10 sm:pt-14 lg:pt-20 pb-12 sm:pb-16 lg:pb-20">
           <div className="flex items-center">
             <img
-              src="/logo-violetwave-blanco.jpeg"
+              src="/logo-violetwave-blanco.png"
               alt="Violet Wave"
               className="h-24 sm:h-28 lg:h-32 w-auto"
               loading="eager"
